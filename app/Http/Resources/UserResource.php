@@ -15,7 +15,7 @@ class UserResource extends JsonResource
     public function toArray(Request $request): array
     {
         return array_merge(parent::toArray($request), [
-            'avatar_url' => env('APP_URL') . $this->avatar
+            'avatar_url' => env('APP_URL') . '/storage' . $this->avatar
         ]);
     }
 }
